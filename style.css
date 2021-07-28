@@ -1,10 +1,30 @@
+html{
+    padding: none;
+	margin: none;
+    background-color: rgba(231, 194, 124, 0.315);
+}
 header{
     display: flex;
     justify-content: center;
 }
+body{
+    background-color: whitesmoke;
+}
 main{
     display: flex;
-    padding: 1 rem;
-    margin: auto;
-    justify-content: center;
+}
+.PLAYER1{
+    display: flex;
+}
+.centerColonne{
+}
+.PLAYER2{
+}
+.row1{
+    display: grid;
+    grid-row: 1/1;
+}
+.globalScorePlayer,.rollDice,.hold{
+    display: grid;
+    grid-row: 2/2;
 }
