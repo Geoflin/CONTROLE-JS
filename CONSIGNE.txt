@@ -1,0 +1,37 @@
+Création petit jeu sur navigateur web avec DOM
+-fonctionnel
+-interface lisible = à maquette fournie
+En front-desk (côté client) possibilité de:
+-créer  nouvelle partie
+-retenir  score courant
+- lancer le dé
+-	avoir 2 joueurs
+
+
+Contexte:
+Règles :
+-2 joueurs sur un seul et même écran
+-Chaque joueur possède score:
+ temporaire (ROUND) 
+ global (GLOBAL)
+À	chaque tour:
+  joueur a son ROUND:
+  initialisé à 0
+  peut lancer un dé à l'infini
+  résultat lancer = est ajouté au ROUND
+Lors de son tour: joueur peut décider à tout moment de:
+-	Cliquer sur option “Hold” pour
+ envoyer points du ROUND vers GLOBAL
+Ce sera alors le tour de l’autre joueur
+-	Lancer le dé S’il obtient un 1,
+ son score ROUND est perdu et c’est la fin de son tour
+Le premier joueur qui atteint les 100 points sur global gagne le jeu
+
+
+Barème:
+1. Connaissance environnement de développement (2 points).
+2.	scripts événementiels + script côté client (5 points).
+3.	Utilisation des normes ECMAScript (JS) et du DOM (5 points).
+4.	Connaissance + utilisation framework de présentation de type adaptatif (5 points).
+5.	Déploiement de la réalisation en ligne (3 points).
+
