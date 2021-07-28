@@ -2,3 +2,9 @@ header{
     display: flex;
     justify-content: center;
 }
+main{
+    display: flex;
+    padding: 1 rem;
+    margin: auto;
+    justify-content: center;
+}
