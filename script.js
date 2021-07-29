@@ -1,33 +1,3 @@
-/*ROLLDICE */
-var ROUND = entierAleatoire(1, 6);
-
-const rollDice = document.getElementById('rollDice')
-const ROUND1 = document.getElementById('ROUND1')
-const ROUND2 = document.getElementById('ROUND2')
-
-const rolldice = () => {
-  var ROUND = entierAleatoire(1, 6);
-  ROUND1.textContent = ROUND
-  ROUND2.textContent = ROUND
-}
-
-rollDice.addEventListener('click', rolldice)
-
-/*HOLD*/
-let GLOBAL = 0
-
-const hold = document.getElementById('hold')
-const GLOBAL1 = document.getElementById('GLOBAL1')
-const GLOBAL2 = document.getElementById('GLOBAL2')
-
-const Hold = () => {
-  GLOBAL++
-  GLOBAL1.textContent = ROUND1.textContent
-  GLOBAL2.textContent = ROUND2.textContent
-}
-
-hold.addEventListener('click', Hold)
-
 /*RANDOM*/
 function entierAleatoire(min, max)
 {
@@ -36,3 +6,53 @@ function entierAleatoire(min, max)
 //Utilisation
 //La variable contient un nombre aléatoire compris entre 1 et 6
 var entier = entierAleatoire(1, 6);
+
+
+/*ROLLDICE */
+var ROUND = 0
+
+let rollDice = document.getElementById('rollDice')
+let ROUND1 = document.getElementById('ROUND1')
+let ROUND2 = document.getElementById('ROUND2')
+let IntRound1 = ROUND1
+
+var ROUND1MEMORI= 0
+
+const rolldice = () => {
+  var ROUND = entierAleatoire(1, 6);
+  ROUND1.textContent = ROUND
+  ROUND2.textContent = ROUND
+  ROUND1MEMORI= ROUND
+}
+
+rollDice.addEventListener('click', rolldice)
+
+/*HOLD*/
+let DEFAULT=0
+
+let hold = document.getElementById('hold')
+let GLOBAL1 = document.getElementById('GLOBAL1')
+let GLOBAL2 = document.getElementById('GLOBAL2')
+
+const Hold = () => {
+  let GLOBAL= (DEFAULT+ROUND1MEMORI)
+  GLOBAL1.textContent = GLOBAL
+  GLOBAL2.textContent = GLOBAL
+  DEFAULT= GLOBAL
+}
+
+hold.addEventListener('click', Hold)
+
+/*TEST*/
+
+let test1= 4
+let test2= 5
+let result= test1 + test2
+
+let test= document.getElementById('TEST')
+
+const Test = () => {
+ test.textContent= result
+}
+
+test.addEventListener('click',Test)
