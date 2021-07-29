@@ -1,7 +1,9 @@
 html{
-    padding: none;
-	margin: none;
     background-color: rgba(231, 194, 124, 0.315);
+    font-size: 20px;
+}
+html i{
+    font-size: 2rem;
 }
 header{
     display: flex;
@@ -14,20 +16,33 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-row-gap: 100px;
+    grid-row-gap: 1000px;
+    padding: 1rem;
+	margin: 1rem;
+    font-size: 2rem;
 }
 .playerName{
     grid-row: 1/1;
     display: flex;
     justify-content: space-around;
+    padding: 1rem;
 }
-.playerScore{
+.playerScore,.dice{
     grid-row: 2/2;
     display: flex;
     justify-content: space-around;
 }
-.globalScorePlayer{
-    grid-row: 2/2;
+.globalScorePlayer,.rollDice,.hold{
+    grid-row: 3/3;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+}
+span{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.dice i{
+    font-size: 10rem;
 }
