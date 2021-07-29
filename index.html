@@ -10,12 +10,12 @@
   </head>
   <body>
     <header>
-      <h1 onClick="window.location.reload();"><i class="material-icons" id="newGame">add_circle_outline</i> NEW GAME</h1> 
+      <h1 onClick="window.location.reload();"><i class="material-icons">add_circle_outline</i> NEW GAME</h1> 
     </header>
     <main>
       <section class="PLAYER1">
         <span>
-          <div class="playerName">PLAYER 1</div>
+          <div class="playerName">PLAYER 1<i class="material-icons" id="displayPlayerTurn1">radio_button_checked</i></div>
         <div class="ROUND" id="ROUND1">0</div>
         </span>
         <span>
@@ -32,10 +32,10 @@
 
         <span>
         <section class="rollDice" id="rollDice">
-          <button><i class="material-icons">autorenew</i>ROLLDICE</button>
+          <div><i class="material-icons">autorenew</i>ROLLDICE</div>
         </section>
         <section class="hold" id="hold">
-          <button><i class="material-icons">file_download</i>HOLD</button>
+          <div><i class="material-icons">file_download</i>HOLD</div>
         </section>
       </span>
 
@@ -45,7 +45,7 @@
 
       <section class="PLAYER2">
         <span>
-          <div class="playerName">PLAYER 2</div>
+          <div class="playerName">PLAYER 2<i class="material-icons" id="displayPlayerTurn2">radio_button_checked</i></div>
         <div class="ROUND" id="ROUND2">0</div>
         </span>
         <span>
@@ -56,5 +56,6 @@
 
     </main>
     <script src="script.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
   </body>
 </html>

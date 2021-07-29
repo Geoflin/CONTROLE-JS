@@ -59,3 +59,6 @@ span{
 #GLOBAL1,#GLOBAL2{
     color: white;
 }
+#displayPlayerTurn2{
+    display: none;
+}

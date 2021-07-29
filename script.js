@@ -9,7 +9,7 @@ var entier = entierAleatoire(1, 6);
 
 
 /*ROLLDICE */
-var ROUND = 0
+var ROUND = entierAleatoire(1, 6);
 
 let rollDice = document.getElementById('rollDice')
 let ROUND1 = document.getElementById('ROUND1')
@@ -19,15 +19,21 @@ let IntRound1 = ROUND1
 var ROUND1MEMORI= 0
 
 const rolldice = () => {
-  var ROUND = entierAleatoire(1, 6);
-  ROUND1.textContent = ROUND
-  ROUND2.textContent = ROUND
-  ROUND1MEMORI= ROUND
+    if (ROUND == 1){
+        ROUND1.textContent = 0
+        ROUND2.textContent = 0
+    } else{
+        var ROUND = entierAleatoire(1, 6);
+        ROUND1.textContent = ROUND
+        ROUND2.textContent = ROUND
+        ROUND1MEMORI= ROUND
+    }
 }
 
 rollDice.addEventListener('click', rolldice)
 
 /*HOLD*/
+
 let DEFAULT=0
 let GLOBAL=0
 
@@ -47,16 +53,25 @@ const Hold = () => {
 }
 
 hold.addEventListener('click', Hold)
+hold.addEventListener('click', playerTurn)
 
-/*NEW GAME*/
-let newGame= document.getElementById('newGame')
 
-const newgame = () => {
-    
-  }
-  
-  newGame.addEventListener('click', newgame)
+/**PLAYER TURN*/
+let displayPlayerTurn1= document.getElementById('displayPlayerTurn1')
+let displayPlayerTurn2= document.getElementById('displayPlayerTurn2')
+let PLAYERTURN= 1
 
+const playerTurn = () => {
+    if (PLAYERTURN == 1){
+        displayPlayerTurn1.style.display= "none"
+        displayPlayerTurn2.style.display= "block"
+        PLAYERTURN= 0
+    } else{
+        displayPlayerTurn1.style.display= "block"
+        displayPlayerTurn2.style.display= "none"
+        PLAYERTURN= 1
+    }
+}
 
 /*TEST*/
 
@@ -70,4 +85,4 @@ const Test = () => {
  test.textContent= result
 }
 
-test.addEventListener('click',Test)
+test.addEventListener('click', playerTurn)
