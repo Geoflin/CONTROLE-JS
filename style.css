@@ -29,12 +29,12 @@ main{
     justify-content: space-around;
     padding: 1rem;
 }
-.playerScore,.dice{
+.ROUND,.dice{
     grid-row: 2/2;
     display: flex;
     justify-content: space-around;
 }
-.globalScorePlayer,.rollDice,.hold{
+.GLOBAL,.rollDice,.hold{
     grid-row: 3/3;
     display: flex;
     justify-content: center;
@@ -49,13 +49,13 @@ span{
 .dice .material-icons{
     font-size: 10rem;
 }
-.playerScore{
+.ROUND{
     color: rgb(194, 0, 0);
     font-size: 4rem;
 }
-.globalScorePlayer{
+.GLOBAL{
     background-color: rgb(194, 0, 0);
 }
-#white{
+#GLOBAL1,#GLOBAL2{
     color: white;
 }
