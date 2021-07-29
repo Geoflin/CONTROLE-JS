@@ -3,10 +3,6 @@ function entierAleatoire(min, max)
 {
  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-//Utilisation
-//La variable contient un nombre aléatoire compris entre 1 et 6
-var entier = entierAleatoire(1, 6);
-
 
 /*ROLLDICE */
 var ROUND = entierAleatoire(1, 6);
@@ -14,7 +10,6 @@ var ROUND = entierAleatoire(1, 6);
 let rollDice = document.getElementById('rollDice')
 let ROUND1 = document.getElementById('ROUND1')
 let ROUND2 = document.getElementById('ROUND2')
-let IntRound1 = ROUND1
 
 var ROUND1MEMORI= 0
 
@@ -34,27 +29,43 @@ rollDice.addEventListener('click', rolldice)
 
 /*HOLD*/
 
-let DEFAULT=0
-let GLOBAL=0
+let DEFAULT1=0
+let GLOBAL1=0
+let DEFAULT2=0
+let GLOBAL2=0
 
 let hold = document.getElementById('hold')
 let GLOBAL1 = document.getElementById('GLOBAL1')
 let GLOBAL2 = document.getElementById('GLOBAL2')
 
 const Hold = () => {
-  if (DEFAULT >= 100){
-    alert('WIN');
-      } else{
-        let GLOBAL= (DEFAULT+ROUND1MEMORI)
-        GLOBAL1.textContent = GLOBAL
-        GLOBAL2.textContent = GLOBAL
-        DEFAULT= GLOBAL
-      }
+    if (PLAYERTURN == 1){
+        
+        if (DEFAULT1 >= 100){
+            alert('Victoir du joueur 1 !');
+              } else{
+                let GLOBAL1= (DEFAULT1+ROUND1MEMORI)
+                GLOBAL1.textContent = GLOBAL1
+                DEFAULT1= GLOBAL1
+                displayPlayerTurn1.style.display= "none"
+                displayPlayerTurn2.style.display= "block"
+          PLAYERTURN= 2
+        }
+    } else{
+        if (DEFAULT2 >= 100){
+            alert('Victoir du joueur 2 !');
+              } else{
+                let GLOBAL2= (DEFAULT2+ROUND1MEMORI)
+                GLOBAL2.textContent = GLOBAL2
+                DEFAULT2= GLOBAL2
+              }
+        displayPlayerTurn1.style.display= "block"
+        displayPlayerTurn2.style.display= "none"
+        PLAYERTURN= 1
+    }
 }
 
 hold.addEventListener('click', Hold)
-hold.addEventListener('click', playerTurn)
-
 
 /**PLAYER TURN*/
 let displayPlayerTurn1= document.getElementById('displayPlayerTurn1')
@@ -65,7 +76,7 @@ const playerTurn = () => {
     if (PLAYERTURN == 1){
         displayPlayerTurn1.style.display= "none"
         displayPlayerTurn2.style.display= "block"
-        PLAYERTURN= 0
+        PLAYERTURN= 2
     } else{
         displayPlayerTurn1.style.display= "block"
         displayPlayerTurn2.style.display= "none"
