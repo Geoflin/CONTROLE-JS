@@ -29,19 +29,26 @@ rollDice.addEventListener('click', rolldice)
 
 /*HOLD*/
 let DEFAULT=0
+let GLOBAL=0
 
 let hold = document.getElementById('hold')
 let GLOBAL1 = document.getElementById('GLOBAL1')
 let GLOBAL2 = document.getElementById('GLOBAL2')
 
 const Hold = () => {
-  let GLOBAL= (DEFAULT+ROUND1MEMORI)
-  GLOBAL1.textContent = GLOBAL
-  GLOBAL2.textContent = GLOBAL
-  DEFAULT= GLOBAL
+  if (DEFAULT >= 100){
+    alert('WIN');
+      } else{
+        let GLOBAL= (DEFAULT+ROUND1MEMORI)
+        GLOBAL1.textContent = GLOBAL
+        GLOBAL2.textContent = GLOBAL
+        DEFAULT= GLOBAL
+      }
 }
 
 hold.addEventListener('click', Hold)
+
+
 
 /*TEST*/
 
