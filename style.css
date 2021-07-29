@@ -11,20 +11,23 @@ body{
     background-color: whitesmoke;
 }
 main{
-    display: flex;
-}
-.PLAYER1{
-    display: flex;
-}
-.centerColonne{
-}
-.PLAYER2{
-}
-.row1{
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 100px;
+}
+.playerName{
     grid-row: 1/1;
+    display: flex;
+    justify-content: space-around;
 }
-.globalScorePlayer,.rollDice,.hold{
-    display: grid;
+.playerScore{
     grid-row: 2/2;
+    display: flex;
+    justify-content: space-around;
+}
+.globalScorePlayer{
+    grid-row: 2/2;
+    display: flex;
+    justify-content: space-around;
 }
