@@ -48,6 +48,14 @@ const Hold = () => {
 
 hold.addEventListener('click', Hold)
 
+/*NEW GAME*/
+let newGame= document.getElementById('newGame')
+
+const newgame = () => {
+    
+  }
+  
+  newGame.addEventListener('click', newgame)
 
 
 /*TEST*/
