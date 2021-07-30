@@ -1,3 +1,25 @@
+/*RULES*/
+window.alert("Bienvenue dans le mini-jeux Dual-dice !");
+
+let rule= document.getElementById('rule')
+let rules1= document.getElementById('rules1')
+let rules2= document.getElementById('rules2')   
+
+
+const Rules1 = () => {
+    rule.style.display = "block"
+    rules1.style.display = "none"
+    rules2.style.display = "block"
+}
+const Rules2 = () => {
+    rule.style.display = "none"
+    rules1.style.display = "block"
+    rules2.style.display = "none"
+}
+
+rules1.addEventListener('click', Rules1);
+rules2.addEventListener('click', Rules2);
+
 /*NEWGAME*/
 const newGame = document.getElementById('newGame');
 
@@ -102,17 +124,3 @@ const Hold = () => {
 }
 
 hold.addEventListener('click', Hold)
-
-/*TEST*/
-
-let test1 = 4
-let test2 = 5
-let result = test1 + test2
-
-let test = document.getElementById('TEST')
-
-const Test = () => {
-    test.textContent = result
-}
-
-test.addEventListener('click', Test)

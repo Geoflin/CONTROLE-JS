@@ -7,12 +7,12 @@ html i.material-icons{
     font-size: 2rem;
     color: rgb(194, 0, 0);
 }
-header{
-    display: flex;
-    justify-content: center;
-}
 body{
     background-color: whitesmoke;
+}
+header{
+    display: flex;
+    justify-content:center;
 }
 main{
     display: grid;
@@ -59,6 +59,6 @@ span{
 #GLOBAL1,#GLOBAL2{
     color: white;
 }
-#displayPlayerTurn2{
+#displayPlayerTurn2,#rules2,#rule{
     display: none;
 }
