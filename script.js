@@ -1,3 +1,14 @@
+/*NEWGAME*/
+const newGame = document.getElementById('newGame');
+
+const newgame = () => {
+if (confirm('Voulez vous commencer une nouvelle partie ?')) {
+    window.location.reload()
+}
+}
+
+newGame.addEventListener('click', newgame);
+
 /*RANDOM*/
 function entierAleatoire(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
