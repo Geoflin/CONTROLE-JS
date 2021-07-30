@@ -1,5 +1,5 @@
 /*RULES*/
-window.alert("Bienvenue dans le mini-jeux Dual-dice !");
+
 
 let rule= document.getElementById('rule')
 let rules1= document.getElementById('rules1')
