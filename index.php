@@ -10,6 +10,7 @@
   </head>
   <body>
     <aside>
+    <div class="center"><i class="material-icons">account_circle</i><a href="https://cvmarhoffergeoffrey.herokuapp.com/" target="_blank">Codeur: Geoffrey</a></div>
 
       <span class="buttonRule">
         <i class="material-icons">gavel</i>Règles du mini-jeux<i class="material-icons" id="rules1">expand_more</i><i class="material-icons" id="rules2">chevron_right</i>
@@ -83,10 +84,13 @@
         <span>
           <div class="GLOBAL">Current</div>
           <div class="GLOBAL" id="GLOBAL2">0</div>
-        </span class="row2">
+        </span class="row2"></br></br>
       </section>
+
 
     </main>
     <script src="script.js"></script>
+   
+				
   </body>
 </html>

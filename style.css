@@ -14,17 +14,13 @@ header{
 main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-row-gap: 1000px;
-    padding: 1rem;
-	margin: 1rem;
-    font-size: 2rem;
+    grid-template-rows: 1fr;
+
 }
 .playerName{
     grid-row: 1/1;
     display: flex;
     justify-content: space-around;
-    padding: 1rem;
 }
 .ROUND,.dice{
     grid-row: 2/2;
@@ -41,7 +37,6 @@ span{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1rem;
 }
 .dice .material-icons{
     font-size: 10rem;
@@ -58,4 +53,7 @@ span{
 }
 #displayPlayerTurn2,#rules2,#rule{
     display: none;
+}
+.center{
+    margin-left: 90%;
 }
